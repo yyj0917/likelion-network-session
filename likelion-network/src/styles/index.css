@@ -1,0 +1,42 @@
+@layer theme, base, components, utilities;
+
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'SunBatang-Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+    * {
+      font-family: 'SunBatang-Light', sans-serif;
+    }
+  }
+
+@layer components {
+    .with-logo-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url('/src/assets/멋쟁이사자처럼_로고.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.1; /* 원하면 조절 가능 */
+        z-index: -1;
+        pointer-events: none;
+        border-radius: 0.75rem; /* Tailwind rounded-xl 값 */
+      }
+    .scrollbar-hide {
+      /* IE, Edge용 */
+      -ms-overflow-style: none;
+      /* Firefox용 */
+      scrollbar-width: none;
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+      /* Chrome, Safari, Opera용 */
+      display: none;
+    }
+}
