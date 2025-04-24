@@ -1,4 +1,4 @@
-import { Undo2 } from 'lucide-react'
+import { Home, Undo2 } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -9,12 +9,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <h1>2025.05.22 FrontEnd 통신 세션</h1>
                 <h3 className='text-lg font-semibold'>(부제 : 신촌 맛집 추천)</h3>
                 <span 
-                    className='absolute size-10 z-50 top-[40%] right-2 rounded-full border border-gray-200 bg-white flex items-center justify-center hover:bg-gray-100 cursor-pointer'
+                    className='absolute size-10 z-50 top-[40%] left-2 rounded-full border border-[#2A2A6F] bg-white flex items-center justify-center hover:bg-gray-100 cursor-pointer'
                     onClick={()=>router(-1)}>
-                    <Undo2 />
+                    <Home />
                 </span>
             </header>
-            <main className='relative w-[600px] max-h-[600px] border-4 border-orange-500 rounded-xl aspect-square with-logo-bg'>
+            <main className='relative w-[600px] h-[500px] border-4 border-orange-500 rounded-xl aspect-square with-logo-bg'>
                 {children}
             </main>
         </div>

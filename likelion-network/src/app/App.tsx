@@ -21,6 +21,7 @@ function App() {
           <Route path="/get" element={<GetPage/>} />
           <Route path="/post" element={<PostPage/>} />
           <Route path="/delete" element={<DeletePage/>} />
+          <Route path="/patch/:id" element={<PatchPage/>} />
           <Route path="/patch" element={<PatchPage/>} />
         </Routes>
       </Layout>

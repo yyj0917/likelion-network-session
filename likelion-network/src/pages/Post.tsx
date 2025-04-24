@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { createRestaurant } from "../api/post";
+import { useNavigate } from "react-router-dom";
 
 
 export default function PostPage() {
+    const router = useNavigate();
     const [name, setName] = useState<string>("");
     const [location, setLocation] = useState<string>("");
     const [comment, setComment] = useState<string>("");
@@ -31,12 +33,12 @@ export default function PostPage() {
             image_url: "https://source.unsplash.com/random/800x600/?food",
         })
         alert("식당이 등록되었습니다.");
-        handleInit();
+        router('/');
     }
 
     return (
         <div className='p-4 w-full h-full flex flex-col justify-between'>
-            <form action="" className='flex flex-col gap-8'>
+            <form action="" className='flex flex-col gap-4'>
                 {inputArr.map((input) => (
                     <div className='w-full flex flex-col gap-2'>
                         <label htmlFor="name" className='text-lg font-semibold'>{input.label}</label>
